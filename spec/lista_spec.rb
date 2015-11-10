@@ -26,6 +26,13 @@ describe "Creación de la lista" do
         @lista1.should be_an_instance_of Lista
     end
 end
+
+describe "COmprobación de nodos" do
+	it "Se han creado los nodos" do
+	    libro1.should be_an_instance_of Nodo
+	end
+end
+
 describe "#inclusion en la lista" do
     it "Segundo libro introducido" do 
         @lista1.añadir(libro2)    
