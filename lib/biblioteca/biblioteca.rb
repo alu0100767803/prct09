@@ -1,6 +1,6 @@
 class Libro
-    attr_reader :autores, :titulo, :serie, :editorial, :edicion, :fecha, :isbn 
-    attr_writer :autores, :titulo, :serie, :editorial, :edicion, :fecha, :isbn
+    attr_accessor :autores, :titulo, :serie, :editorial, :edicion, :fecha, :isbn 
+    
     def initialize(autores, titulo, serie, editorial, edicion, fecha, isbn)
         @autores=autores
         @titulo=titulo
