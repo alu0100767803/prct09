@@ -1,3 +1,6 @@
+require "biblioteca/version"
+require "biblioteca/biblioteca"
+
 class Nodo
     attr_accessor :valor, :siguiente
    
