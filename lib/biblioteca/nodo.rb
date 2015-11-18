@@ -1,10 +1,10 @@
-require "biblioteca/version"
 require "biblioteca/biblioteca"
 
 class Nodo
-    attr_accessor :valor, :siguiente
+    attr_accessor :anterior, :valor, :siguiente
    
-    def initialize(valor,siguiente)
+    def initialize(anterior,valor,siguiente)
+        @anterior=anterior
        @valor=valor
        @siguiente=siguiente
     end
