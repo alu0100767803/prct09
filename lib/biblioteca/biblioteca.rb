@@ -1,4 +1,5 @@
 class Libro
+    include Comparable
     attr_accessor :autores, :titulo, :serie, :editorial, :edicion, :fecha, :isbn 
     
     def initialize(autores, titulo, serie, editorial, edicion, fecha, isbn)
@@ -46,5 +47,20 @@ class Libro
         puts "Editorial: #{@editorial}"
         puts "Edicion: #{@edicion}, fecha #{@fecha}"
         puts "ISBN:#{@isbn}"
+    end
+    
+    def <=>(other)
+          return nil unless other.instance_of? Libro
+          @titulo <=> other.titulo
+    end
+    
+    def each
+        yield @autores
+        yield @titulo
+        yield @serie
+        yield @editorial
+        yield @edicion
+        yield @fecha
+        yield @isbn
     end
 end

@@ -3,7 +3,7 @@ require "req"
 
 describe Revista do
 	before :each do
-		@Revista1 = Revista.new("titulo", "editorial", "edicion1", "fecha","url")
+		@Revista1 = Revista.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "issn")
 	end
 	
 	describe "#Se crea la revista" do
@@ -13,5 +13,9 @@ describe Revista do
 		it "Se ha heredado la revista de Libro" do
 			@Revista1.is_a? Libro
 		end
+		it "Instancia de libro" do
+			expec(@Revista1.instance_of? Libro).to eq false	
+		end
 	end	
-end
+	
+end 

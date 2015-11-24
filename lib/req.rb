@@ -1,3 +1,6 @@
 require "biblioteca/biblioteca"
 require "biblioteca/lista"
 require "biblioteca/nodo"
+require "biblioteca/revista"
+require "biblioteca/libroe"
+require "biblioteca/periodico"

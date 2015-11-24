@@ -10,8 +10,8 @@ describe Periodico do
 		it "Se ha creado el periodico" do
 			@Periodico1.should be_an_instance_of Periodico
 		end
-		it "Se ha heredado el periodico de Libro" do
-			@Periodico1.is_a? Libro
-		end
+#		it "Se ha heredado el periodico de Libro" do
+#			@Periodico1.is_a? Libro
+#		end
 	end	
 end
