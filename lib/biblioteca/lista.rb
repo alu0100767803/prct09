@@ -1,6 +1,7 @@
 require "biblioteca/version"
 
 class Lista
+    include Enumerable
     attr_accessor :valor
     
     def initialize(valor)
@@ -27,8 +28,7 @@ class Lista
     end
     
     def añadir(valor)
-        current = @head
-        previous
+        current = @cabecera
         while (current.siguiente != nil)
             current = current.siguiente
         end 
@@ -58,4 +58,15 @@ def borrar(valor)
     end
 end
     
+def each
+    #current = @cabecera
+     #   while (current.siguiente != nil)
+      #      yield current
+       #     current = current.siguiente
+        #end
+        
+        yield @cabecera
+        yield @fin
+    
+end
 end

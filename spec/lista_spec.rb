@@ -9,9 +9,9 @@ describe Lista do
         @l2 = Libro.new(['Scott Chacon'], "Pro Git 2009th Edition", "(Pro)","Apress", "2009 edition", "August 27, 2009",['ISBN-13: 978-1430218333','ISBN-10: 1430218339'] )
         @l4 = Libro.new(['David Chelimsky', 'Dave Astels', 'Bryan Helmkamp', 'Dan North', 'Zach Dennis', 'Aslak Hellesoy'] , "The Rspec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends", "(The Facets of Ruby)", "Pragmatic Bookshelf", "1 edition", "July 7, 2013", ['ISBN-13: 978-1937785499', 'ISBN-10: 1937785491'])
         
-        @r1 = Revista.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "issn")
-        @p1 = Periodico.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "cod")
-        @le1 = Libroe.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "url")
+        #@r1 = Revista.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "issn")
+        #@p1 = Periodico.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "cod")
+        #@le1 = Libroe.new("autores", "titulo", "serie", "editorial", "edicion1", "fecha", "url")
         
         @lista1 = Lista.new(@l1)
     end
@@ -28,9 +28,9 @@ describe Lista do
     describe "Añadir a la lista" do
         it "Se han añadido elementos a la lista" do
                  @lista1.añadir(@l2)
-                 @lista1.añadir(@l3)
+               #  @lista1.añadir(@l3)
                  @lista1.añadir(@l4)
-                 @lista1.añadir(@l5)
+                # @lista1.añadir(@l5)
                  
                  @lista1.shoul be_true
         end
@@ -60,6 +60,15 @@ describe Lista do
     describe "Eliminar elemento" do
        it "Se ha eliminado" do
             @lista1.borrar(@l3)
+        end
+    end
+    
+    describe "Enumerable" do
+        it"comprobando any?" do
+            expect(@lista1.any?).to eq(true)
+        end
+        it "Comprobando count" do
+            expect(@lista1.count).to eq(2) 
         end
     end
 end
