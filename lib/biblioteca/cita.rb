@@ -1,4 +1,4 @@
-=begin class Cita
+class Cita
     attr_accessor :nombre, :apellido, :titulo, :fecha, :lugar, :editorial, :edicion, :volumen, :APA
     
     def initialize(titulo,fecha,lugar,editorial)
