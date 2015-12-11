@@ -68,7 +68,7 @@ describe Lista do
             expect(@lista1.any?).to eq(true)
         end
         it "Comprobando count" do
-            expect(@lista1.count).to eq(2) 
+            expect(@lista1.count).to eq(3) 
         end
     end
 end

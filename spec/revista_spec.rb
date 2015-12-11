@@ -14,7 +14,7 @@ describe Revista do
 			@Revista1.is_a? Libro
 		end
 		it "Instancia de libro" do
-			expec(@Revista1.instance_of? Libro).to eq false	
+			expect(@Revista1.instance_of? Libro).to eq false	
 		end
 	end	
 	
